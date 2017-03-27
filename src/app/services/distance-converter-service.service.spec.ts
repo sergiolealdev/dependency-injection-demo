@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { DistanceConverterServiceService } from './distance-converter-service.service';
+import { DistanceConverterService } from './distance-converter-service.service';
 
 describe('DistanceConverterServiceService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [DistanceConverterServiceService]
+      providers: [DistanceConverterService]
     });
   });
 
-  it('should ...', inject([DistanceConverterServiceService], (service: DistanceConverterServiceService) => {
+  it('should ...', inject([DistanceConverterService], (service: DistanceConverterService) => {
     expect(service).toBeTruthy();
   }));
 });
