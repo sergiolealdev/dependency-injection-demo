@@ -5,10 +5,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import {DistanceConverterService} from './services/distance-converter-service.service';
+import { ConversorComponent } from './components/conversor/conversor.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ConversorComponent
   ],
   imports: [
     BrowserModule,
