@@ -9,5 +9,4 @@ export class MockDistanceConverterService implements IDistanceConverterService{
   convertMilesToKm (distance: number) {
     return 0;
   }
-
 }
