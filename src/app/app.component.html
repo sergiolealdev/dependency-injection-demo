@@ -1,8 +1,20 @@
-<h1>
-  {{title}}
-</h1>
-<div>
-  <input type="text" (formControl)="distance">
+<div class="title">
+  Convert km to miles
 </div>
-<conversor
-[value]="distance.value"></conversor>
+<div>
+  <form [formGroup]="myForm">
+    <input type="text" [formControl]="myForm.controls['distance1']">
+  </form>
+</div>
+<conversor [value]="myForm.controls['distance1'].value" [type]="1"></conversor>
+
+
+<div class="title">
+  Convert miles to km
+</div>
+<div>
+  <form [formGroup]="myForm">
+    <input type="text" [formControl]="myForm.controls['distance2']">
+  </form>
+</div>
+<conversor [value]="myForm.controls['distance2'].value" [type]="2"></conversor>

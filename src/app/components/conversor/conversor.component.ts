@@ -5,18 +5,27 @@ import {FormControl} from '@angular/forms/forms';
 @Component({
   selector: 'conversor',
   templateUrl: './conversor.component.html',
-  styleUrls: ['./conversor.component.css']
+  styleUrls: ['./conversor.component.scss']
 })
 export class ConversorComponent implements OnInit {
 
   @Input() value:number;
+  @Input() type:number;
   result:number;
 
   constructor(private service: DistanceConverterService) {
   }
 
   ngOnInit() {
-    this.result = this.service.convertKmToMiles(this.value);
+  }
+
+  ngOnChanges(){
+    if(this.type===1){
+      this.result = this.service.convertKmToMiles(this.value);
+    }else{
+      this.result = this.service.convertMilesToKm(this.value);
+    }
+
   }
 
 }
